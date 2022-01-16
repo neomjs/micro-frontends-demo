@@ -1,7 +1,6 @@
 {
-    "name": "myapp",
-    "version": "0.1.0",
-    "private": true,
+    "name": "neo-mfe-1",
+    "version": "1.0.0",
     "scripts": {
         "build-all": "node ./node_modules/neo.mjs/buildScripts/buildAll.js -n",
         "build-all-questions": "node ./buildScripts/buildAll.js",
