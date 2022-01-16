@@ -1,7 +1,7 @@
 import Component from '../../../main/node_modules/neo.mjs/src/component/Base.mjs';
 
 /**
- * @class Mfe1.view.MainComponent
+ * @class Mfe1.view.MfeContainer
  * @extends Neo.component.Base
  */
 class MainComponent extends Component {
