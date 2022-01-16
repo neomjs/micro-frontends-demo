@@ -1,5 +1,5 @@
-import Panel         from '../../../main/node_modules/neo.mjs/src/container/Panel.mjs';
 import Mfe1Component from '../../../mfe_1/src/view/MainComponent.mjs';
+import Panel         from '../../../main/node_modules/neo.mjs/src/container/Panel.mjs';
 
 /**
  * @class Mfe2.view.MfePanel
@@ -22,6 +22,9 @@ class MfePanel extends Panel {
         }]
     }}
 
+    /**
+     * @param {Object} config
+     */
     construct(config) {
         let me = this;
 
