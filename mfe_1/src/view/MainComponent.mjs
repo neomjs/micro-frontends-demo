@@ -8,7 +8,7 @@ class MainComponent extends Component {
     static getConfig() {return {
         className: 'MyApp.view.MainComponent',
         html     : 'MFE 1',
-        style    : {color: 'darkgreen', fontSize: '80px', padding: '.5em'}
+        style    : {backgroundColor: 'black', color: 'green', fontSize: '80px', padding: '.5em'}
     }}
 }
 
