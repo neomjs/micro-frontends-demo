@@ -1,4 +1,4 @@
-import Component from '../../node_modules/neo.mjs/src/component/Base.mjs';
+import Component from '../../../main/node_modules/neo.mjs/src/component/Base.mjs';
 
 /**
  * @class Mfe1.view.MainComponent
@@ -6,7 +6,7 @@ import Component from '../../node_modules/neo.mjs/src/component/Base.mjs';
  */
 class MainComponent extends Component {
     static getConfig() {return {
-        className: 'MyApp.view.MainComponent',
+        className: 'Mfe1.view.MainComponent',
         html     : 'MFE 1',
         style    : {backgroundColor: 'black', color: 'green', fontSize: '80px', padding: '.5em'}
     }}

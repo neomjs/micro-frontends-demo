@@ -27,6 +27,14 @@ class MainContainer extends Viewport {
                     iconCls: 'fa fa-home',
                     text   : 'Home'
                 }
+            }, {
+                module: () => import('../../../../mfe_1/src/view/MainComponent.mjs'),
+                html  : 'MFE 1 latest',
+
+                tabButtonConfig: {
+                    iconCls: 'fa fa-user',
+                    text   : 'MFE 1 latest'
+                }
             }]
         }, {
             ntype: 'component',

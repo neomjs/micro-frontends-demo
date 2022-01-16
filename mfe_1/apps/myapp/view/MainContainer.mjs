@@ -1,5 +1,5 @@
 import MainComponent from '../../../src/view/MainComponent.mjs';
-import Viewport      from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
+import Viewport      from '../../../../main/node_modules/neo.mjs/src/container/Viewport.mjs';
 
 /**
  * @class MyApp.view.MainContainer
