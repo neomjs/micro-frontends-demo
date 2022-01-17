@@ -1,7 +1,7 @@
 import ComponentController from '../../../node_modules/neo.mjs/src/controller/Component.mjs';
 
 /**
- * @class Covid.view.MainContainerController
+ * @class MyApp.view.MainContainerController
  * @extends Neo.controller.Component
  */
 class MainContainerController extends ComponentController {
