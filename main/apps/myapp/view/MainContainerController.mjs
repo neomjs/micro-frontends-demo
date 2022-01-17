@@ -14,10 +14,49 @@ class MainContainerController extends ComponentController {
     }}
 
     /**
+     *
+     * @param {String} mainview
+     * @returns {Number}
+     */
+    getTabIndex(mainview) {
+        let map = {
+            home: 0,
+            mfe1: 1,
+            mfe2: 2
+        };
+
+        return map[mainview];
+    }
+
+    /**
+     *
+     */
+    onComponentConstructed() {
+        super.onComponentConstructed();
+
+        if (!Neo.config.hash) {
+            this.onHashChange({
+                hash      : {mainview: 'home'},
+                hashString: 'mainview=home'
+            }, null);
+        }
+    }
+
+    /**
+     * @param {Object} value
+     * @param {Object} oldValue
+     */
+    onHashChange(value, oldValue) {
+        this.getReference('tab-container').activeIndex = this.getTabIndex(value.hash.mainview);
+    }
+
+    /**
      * @param {Object} data
      */
     onHomeButtonClick(data) {
-        console.log('home', data);
+        Neo.Main.editRoute({
+            mainview: 'home'
+        });
     }
 }
 

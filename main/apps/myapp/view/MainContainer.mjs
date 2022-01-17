@@ -19,14 +19,16 @@ class MainContainer extends Viewport {
             html : 'Header',
             style: {backgroundColor: 'black', color: 'green', fontSize: '80px', padding: '.5em'}
         }, {
-            module   : TabContainer,
-            reference: 'tab-container',
+            module     : TabContainer,
+            activeIndex: null, // render no items initially
+            reference  : 'tab-container',
 
             items : [{
                 module: () => import('./HomeComponent.mjs'),
 
                 tabButtonConfig: {
                     iconCls: 'fa fa-home',
+                    route  : 'mainview=home',
                     text   : 'Home'
                 }
             }, {
@@ -35,6 +37,7 @@ class MainContainer extends Viewport {
 
                 tabButtonConfig: {
                     iconCls: 'fa fa-user',
+                    route  : 'mainview=mfe1',
                     text   : 'MFE 1 latest'
                 }
             }, {
@@ -46,6 +49,7 @@ class MainContainer extends Viewport {
 
                 tabButtonConfig: {
                     iconCls: 'fa fa-cog',
+                    route  : 'mainview=mfe2',
                     text   : 'MFE 2 latest'
                 }
             }]
