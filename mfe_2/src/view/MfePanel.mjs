@@ -44,7 +44,9 @@ class MfePanel extends Panel {
      */
     onHomeButtonClick(data) {
         console.log('onHomeButtonClick', data);
-        this.fire('homeButtonClick');
+        this.fire('homeButtonClick', {
+            id: this.id
+        });
     }
 }
 

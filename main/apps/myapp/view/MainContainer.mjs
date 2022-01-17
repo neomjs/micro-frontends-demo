@@ -1,5 +1,6 @@
-import TabContainer from '../../../node_modules/neo.mjs/src/tab/Container.mjs';
-import Viewport     from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
+import MainContainerController from './MainContainerController.mjs'
+import TabContainer            from '../../../node_modules/neo.mjs/src/tab/Container.mjs';
+import Viewport                from '../../../node_modules/neo.mjs/src/container/Viewport.mjs';
 
 /**
  * @class MyApp.view.MainContainer
@@ -7,9 +8,10 @@ import Viewport     from '../../../node_modules/neo.mjs/src/container/Viewport.m
  */
 class MainContainer extends Viewport {
     static getConfig() {return {
-        className: 'MyApp.view.MainContainer',
-        autoMount: true,
-        layout   : {ntype: 'vbox', align: 'stretch'},
+        className : 'MyApp.view.MainContainer',
+        autoMount : true,
+        controller: MainContainerController,
+        layout    : {ntype: 'vbox', align: 'stretch'},
 
         items: [{
             ntype: 'component',
@@ -17,8 +19,8 @@ class MainContainer extends Viewport {
             html : 'Header',
             style: {backgroundColor: 'black', color: 'green', fontSize: '80px', padding: '.5em'}
         }, {
-            module     : TabContainer,
-            activeIndex: 0, // default value
+            module   : TabContainer,
+            reference: 'tab-container',
 
             items : [{
                 module: () => import('./HomeComponent.mjs'),
@@ -34,6 +36,17 @@ class MainContainer extends Viewport {
                 tabButtonConfig: {
                     iconCls: 'fa fa-user',
                     text   : 'MFE 1 latest'
+                }
+            }, {
+                module: () => import('../../../../mfe_2/src/view/MfePanel.mjs'),
+
+                listeners: {
+                    homeButtonClick: 'onHomeButtonClick'
+                },
+
+                tabButtonConfig: {
+                    iconCls: 'fa fa-cog',
+                    text   : 'MFE 2 latest'
                 }
             }]
         }, {
