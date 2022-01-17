@@ -14,10 +14,10 @@ class MainContainerController extends ComponentController {
     }}
 
     /**
-     *
+     * @param {Object} data
      */
-    onHomeButtonClick() {
-        console.log('home');
+    onHomeButtonClick(data) {
+        console.log('home', data);
     }
 }
 
